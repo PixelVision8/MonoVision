@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <DefineConstants>OPENGL;OPENAL;XNADESIGNPROVIDED;LINUX;DESKTOPGL;SUPPORTS_EFX;NETSTANDARD;STBSHARP_INTERNAL</DefineConstants>
+        <TargetFramework>net5.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>PixelVision8.MonoVision</PackageId>
+        <Title>PixelVision8.MonoVision</Title>
+        <Version>0.1.0-alpha</Version>
+        <Authors>Jesse Freeman</Authors>
+        <Company>Pixel Vision 8</Company>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <PackageLicenseExpression>MS-PL</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Remove="MonoVision\Dependencies\**" />
+        <Content Include="MonoVision\Dependencies\soft_oal.dll">
+            <Link>sdl\win-x64\soft_oal.dll</Link>
+            <PackagePath>sdl\win-x64\native</PackagePath>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="MonoVision\Dependencies\SDL2.dll">
+            <Link>sdl\win-x64\SDL2.dll</Link>
+            <PackagePath>sdl\win-x64\native</PackagePath>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="MonoVision\Dependencies\libopenal.so.1">
+            <Link>sdl\linux-x64\libopenal.so.1</Link>
+            <PackagePath>sdl\linux-x64\native</PackagePath>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="MonoVision\Dependencies\libSDL2-2.0.so.0">
+            <Link>sdl\linux-x64\libSDL2-2.0.so.0</Link>
+            <PackagePath>sdl\linux-x64\native</PackagePath>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="MonoVision\Dependencies\libopenal.1.dylib">
+            <Link>sdl\osx\libopenal.1.dylib</Link>
+            <PackagePath>sdl\osx\native</PackagePath>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="MonoVision\Dependencies\libSDL2-2.0.0.dylib">
+            <Link>sdl\osx\libSDL2-2.0.0.dylib</Link>
+            <PackagePath>sdl\osx\native</PackagePath>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+</Project>
